@@ -32,7 +32,7 @@ end
 #__________________________request4_____________________________
 def request4(twitter)
                                     # grep va filtrer les handle qui contiennent @ + un Majuscule et count va les compter
-    puts "\n Nbre de Handle commençants par une Majuscule :  #{twitter.grep(/@[A-Z]/).count}\n"
+    puts "\n Nbre de Handle commençants par une Majuscule :  #{twitter.grep(/[UPPERCASE]/).count}\n"
 end
 
 #__________________________request5_____________________________

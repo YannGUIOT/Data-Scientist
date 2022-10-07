@@ -39,13 +39,10 @@ end
 
 #____________________________exo4_________________________________
 def exo4(crypto)
-    tri = crypto.sort_by {|_key, value| value}.reverse
-    puts "\n Les devises dont le cours est supérieur à 6000 : \n\n"
-    tri.each do |x , y|
-        if y > 6000
-             print " #{x} : #{y} \n"
-        end
-    end
+    tri = crypto.sort_by {|_key, value| value}
+    tri.select! {|_key, value| value.to_f < 6000}
+    tri.reverse!
+    puts "\n La plus chere devise dont le cours est inférieur à 6000 : \n\n #{tri[0]} \n\n"
 end
 
 #____________________________menu_________________________________
